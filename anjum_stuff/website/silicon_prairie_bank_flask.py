@@ -26,8 +26,11 @@ def references():
 
 @app.route("/credit_card")
 def credit_card():
-    # Return template and data
     return render_template("credit_card.html")
+
+@app.route("/loan")
+def loan():
+    return render_template("loan.html")
 
 
 

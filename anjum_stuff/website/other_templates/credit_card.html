@@ -10,31 +10,16 @@
     <title>Credit Card Approval Form</title>
 
     <!-- Boostrap Stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Lorem Grid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"integrity="sha384xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"integrity="sha384qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK"crossorigin="anonymous">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
-    
-    <!-- AJAX/D3/JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-   <!-- D3 Library -->
-   <script src="https://d3js.org/d3.v5.min.js"></script>
-
     <!-- Our own CSS stylesheet -->
-    
-
-    <!-- JavaScript Link -->
-    <script type="text/javascript" src="/static/js/credit_card.js"></script>  
+    <link rel="stylesheet" href="css/home.css" media="screen">
 
   </head>
 
@@ -43,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="/credit_card">Credit Card Application Form</a>
+        <a class="navbar-brand" href="credit_card.html">Credit Card Application Form</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,7 +38,7 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-                <a class="nav-link" href="/loan">Loan Application Form</a>
+                <a class="nav-link" href="loan.html">Loan Application Form</a>
             </li>
            
           </ul>
@@ -71,7 +56,7 @@
         <div class="row">
             
             <div class="col-md-3 text-center">
-                <img src="/static/images/prairie2.jpg" width="100%">
+                <img src="images/prairie2.jpg" width="100%">
             </div>
 
             <div class="col-md-6 text-center">
@@ -83,7 +68,7 @@
             </div>
 
             <div class="col-md-3 text-center">
-                <img src="/static/images/prairie3.jpg" width="100%">
+                <img src="images/prairie3.jpg" width="100%">
             </div>
 
         </div>
@@ -105,27 +90,31 @@
 
         <div class="row">            
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-5 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">Full Name</label>
-                        <textarea id="name" class="form-control" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>
 
             </div>
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-1 text-left">
+
+            </div>
+
+            <div class="col-md-1 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Gender</label><br>
-                        <select id="gender" class="form-select">
-                            <option selected>Female</option>
+                        <select class="form-select" id="exampleSelect1">
+                            <option>Female</option>
                             <option>Male</option>
                         </select>
                         </div>
@@ -134,13 +123,17 @@
             
             </div>
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-1 text-left">
+
+            </div>
+
+            <div class="col-md-2 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">Age</label>
-                        <textarea class="form-control" id="age" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>
@@ -151,13 +144,13 @@
 
         <div class="row">
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-2 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Are you Employed?</label><br>
-                        <select class="form-select" id="employment">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Yes</option>
                             <option>No</option>
                         </select>
@@ -167,13 +160,13 @@
             
             </div>
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-2 text-left">
                 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Do you own Property?</label><br>
-                        <select class="form-select" id="property">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Yes</option>
                             <option>No</option>
                         </select>
@@ -183,13 +176,13 @@
 
             </div>  
 
-            <div class="col-md-4 text-left">               
+            <div class="col-md-2 text-left">               
 
                     <form>
 
                         <div class="form-group">
                             <label for="exampleSelect2" class="form-label mt-4">Marital Status</label><br>
-                            <select class="form-select" id="marital_status">
+                            <select class="form-select" id="exampleSelect1">
                                 <option>Single</option>
                                 <option>Married</option>
                                 <option>Civil Marriage</option>
@@ -202,17 +195,13 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Current Source of Income</label><br>
-                        <select class="form-select" id="income_source">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Working</option>
                             <option>Commerical Associate</option>
                             <option>Pensionier</option>
@@ -225,13 +214,13 @@
             
             </div>
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Occupation</label><br>
-                        <select class="form-select" id="occupation">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Accountant</option>
                             <option>Cleaning Services</option>
                             <option>Kitchen Services</option>
@@ -256,14 +245,18 @@
                 </form>
             
             </div>
+        
+        </div>
 
-            <div class="col-md-4 text-left">
+        <div class="row">
+
+            <div class="col-md-2 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Do you own a Car?</label><br>
-                        <select class="form-select" id="car">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Yes</option>
                             <option>No</option>
                         </select>
@@ -272,31 +265,31 @@
                 </form>
             
             </div>
-        
-        </div>
 
-        <div class="row">
-
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">How long have you been working? (years)</label>
-                        <textarea class="form-control" id="years_working" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>                
             
             </div>
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-1 text-left">
+
+            </div>
+
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Residence Type</label><br>
-                        <select class="form-select" id="residence">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Own House/Apartment</option>
                             <option>With Parents</option>
                             <option>Rented Apartment</option>
@@ -309,13 +302,13 @@
             
             </div>
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">Education Level</label><br>
-                        <select class="form-select" id="education">
+                        <select class="form-select" id="exampleSelect1">
                             <option>Lower Secondary</option>
                             <option>Secondary</option>
                             <option>Some College</option>
@@ -332,56 +325,52 @@
 
         <div class="row">
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">Total Income (Yuan)</label>
-                        <textarea class="form-control" id="income" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>
 
             </div>  
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">Number of Months with Active Credit Card</label>
-                        <textarea class="form-control" id="cc_active_time" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>
 
             </div>  
 
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">Number of Children</label>
-                        <textarea class="form-control" id="num_children" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>
 
             </div>  
-        
-        </div>
 
-        <div class="row">
-
-            <div class="col-md-4 text-left">
+            <div class="col-md-3 text-left">
 
                 <form>
 
                     <div class="form-group">
                         <label for="exampleTextarea" class="form-label mt-4">Total Number of Dependents</label>
-                        <textarea class="form-control" id="size_family" rows="1"></textarea>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
                 </form>
@@ -389,19 +378,9 @@
             </div>  
 
 
-            <div class="col-md-4" style="text-align: center;">
-                <br>
-                <button type="button" class="btn btn-lg btn-primary" id="submit">Submit Application Form</button>
-            </div>
+        </div>
 
-            <div class="col-md-4" style="text-align: center;">
 
-                <br>
-                <p style="font-size: 20px">Result </p>
-
-            </div>
-
-        </div>  
 
 
 
