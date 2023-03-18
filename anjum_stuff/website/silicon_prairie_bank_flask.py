@@ -4,9 +4,12 @@ import pandas as pd
 import numpy as np
 import os
 import pickle
+from modelHelper import ModelHelper
+import json
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+model_helper = ModelHelper()
 
 @app.route("/")
 def home():
@@ -32,7 +35,11 @@ def credit_card():
 def loan():
     return render_template("loan.html")
 
-
+@app.route("/makePredictions", methods=["POST"])
+def makePrediction():
+    content = request.json["data"]
+    pred = model_helper.makePredictionss(content)
+    return(jsonify({"ok": True, "prediction": pred}))
 
 
 

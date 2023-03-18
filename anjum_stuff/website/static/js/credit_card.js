@@ -6,14 +6,10 @@ $(document).ready(function () {
     $("#submit").on("click", function () {
         data = preparedata()
         console.log(data)
-        submitdata(data)
+        make_predictions(data)
     });
     
 });
-
-function submitdata(data) {
-    console.log('Hello')
-}
 
 function preparedata() {
     full_name = d3.select("#name").node().value;
@@ -39,12 +35,12 @@ function preparedata() {
         'Own_car': car,
         'Own_property': property, 
         'Unemployed': employment, 
-        'Num_children': num_children,
-        'Num_family': size_family,
-        'Account_length': cc_active_time, 
-        'Total_income': income,
-        'Age': age, 
-        'Years_employed': years_working,
+        'Num_children': parseInt(num_children),
+        'Num_family': parseInt(size_family),
+        'Account_length': parseInt(cc_active_time), 
+        'Total_income': parseFloat(income)*6,
+        'Age': parseInt(age), 
+        'Years_employed': parseInt(years_working),
         'Income_type': income_source, 
         'Education_type': education, 
         'Family_status': marital_status, 
@@ -53,4 +49,30 @@ function preparedata() {
     }
     return data_json;
     
+}
+
+function make_predictions(payload) {
+
+    $.ajax({
+        type: "POST",
+        url: "/makePredictions",
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({ "data": payload }),
+        success: function(returnedData) {
+            // print it
+            console.log(returnedData);
+            pred_prob = returnedData["prediction"];
+            pred = pred_prob[0];
+            if (returnedData["prediction"] === 1) {
+                $("#output").text("@e are not able to approve your application.");
+            } else {
+                $("#output").text("Congratulations! You are approved!");
+            }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus);
+            alert("Error: " + errorThrown);
+        }
+    });
+
 }
