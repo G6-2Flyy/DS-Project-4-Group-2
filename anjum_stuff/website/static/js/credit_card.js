@@ -62,9 +62,10 @@ function make_predictions(payload) {
             // print it
             console.log(returnedData);
             pred_prob = returnedData["prediction"];
+            console.log(pred_prob)
             pred = pred_prob[0];
-            if (returnedData["prediction"] === 1) {
-                $("#output").text("@e are not able to approve your application.");
+            if (pred == 1) {
+                $("#output").text("We are not able to approve your application.");
             } else {
                 $("#output").text("Congratulations! You are approved!");
             }

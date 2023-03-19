@@ -3,14 +3,6 @@
 
 <head>
 
-  <style>   
-    legend {
-      background-color: gray;
-      color: white;
-      padding: 5px 10px;
-    }
-  </style>
-
   <title>References</title>
 
    <!-- Leaflet CSS -->
@@ -24,8 +16,8 @@
   crossorigin=""></script>
 
   <!-- Bootstrap Code -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"integrity="sha384xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"integrity="sha384qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK"crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"integrity="sha384qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK"crossorigin="anonymous">
 
  
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -36,65 +28,62 @@
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-   <!-- D3 Library -->
-   <script src="https://d3js.org/d3.v5.min.js"></script>
-
-   <!-- JavaScript -->
-   <!-- <script type="text/javascript" src="js/data.js"></script>     -->
-
-   <!-- Our CSS -->
-   <link rel="stylesheet" type="text/css" href="css/referenes.css">
 
 </head>
 
 <body>
 
      <!-- Start of navbar -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-  
-          <a class="navbar-brand" href="home.html">Russia's Invasion of Ukraine</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-  
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav ml-auto">
-              
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dashboards</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="sunburst.html">Sunburst Graph</a>
-                        <a class="dropdown-item" href="graphs.html">Other Graphs</a>
-                    </div>
-                </li>
-  
-              <li class="nav-item">
-                  <a class="nav-link" href="map.html">Map</a>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-  
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data</a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="data.html">Data Tables</a>
-                      <a class="dropdown-item" href="references.html">References</a>
-                  </ul>
-              </li>
-             
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="/">Silicon Prairie Bank</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ml-auto">
             
-          </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Approval Forms</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/credit_card">Credit Card Approval Form</a>
+                    <a class="dropdown-item" href="/loan">Loan Application Approval Form</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tableau Dashboards</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/tableau_cc">Credit Card Data Dashboard</a>
+                    <a class="dropdown-item" href="/tableau_ld">Loan Data Dashboard</a>
+                    <a class="dropdown-item" href="/tableau_ld_map">Loan Data Map</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data</a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                
+                    <a class="dropdown-item" href="/data_cc">Credit Card Datatable</a>
+                    <a class="dropdown-item" href="/data_l">Loan Datatable</a>
+                    <a class="dropdown-item" href="/references">References</a>
+                
+                </ul>
+            </li>
+           
+          </ul>
+          
         </div>
-      </nav>
-      <!-- End of navbar -->
+      </div>
+    </nav>
+    <!-- End of navbar -->
     
       <br>
 
@@ -107,7 +96,7 @@
             <div class="col-md-12 text-center">
 
                 <div class="card bg-light mb-3">
-                    <div class="card-header"><h4>Data Table Reference</h4></div>
+                    <div class="card-header"><h4>Data Tables References</h4></div>
 
                     <div class="card-body">
 
@@ -115,28 +104,28 @@
 
                             <div class = "row">
 
-                                <div class="col-md-6 text-left">
+                                <div class="col-md-7 text-left">
                                 
-                                    <p style="color:black;">We would like to acknowledge the Armed Conflict Location & Event Data Project, or ACLED, for
-                                        providing the information that we used in our displays. You are able to download our data set
-                                        at this <a href="https://acleddata.com/" style = color:blue;>website</a>.
+                                    <p style="color:black;">We would like to thank Samuel Cortinhas for his clean and comprehensive dataset
+                                      linking credit card approvals to various other factors. You are able to download his data set
+                                        at this <a href="https://www.kaggle.com/datasets/samuelcortinhas/credit-card-classification-clean-data" style = color:blue;>website</a>.
                                     </p>
-                                
-                                    <p style="color:black;">We would also like to acknowledge The Humanitarian Data Exchange Project for providing 
-                                       the geoJSON data that we used to map the boundaries of the Ukrainian administrative divisions and sub-divisions.
-                                       You are able to download the geoJSONS at this link: <br><br><a href="https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-ukraine?" style="color:blue;">https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-ukraine?</a> </p>
-                                    <p style="color:black;">You may also learn more about the war at the links below:</p>
+                                    
+                                    <p style="color:black;">We would also like to acknowledge Arbaz Khan for the dataset linking loan approvals to
+                                      other facts about the loans. You will be able to download that data set<a href="https://www.kaggle.com/datasets/arbazkhan971/loan-approval-analysis" style="color:blue;"> here</a> </p>
+                                    
+                                     <p style="color:black;">You may also learn more about credit cards and loan approvals at the links below:</p>
 
                                     <ol>
-                                      <li><a href="https://www.cfr.org/global-conflict-tracker/conflict/conflict-ukraine" style = color:blue;>https://www.cfr.org/global-conflict-tracker/conflict/conflict-ukraine</a></li>
-                                      <li><a href="https://www.nytimes.com/news-event/ukraine-russia" style = color:blue;>https://www.nytimes.com/news-event/ukraine-russia</a></li>
-                                      <li><a href="https://www.ft.com/content/4351d5b0-0888-4b47-9368-6bc4dfbccbf5" style = color:blue;>https://www.ft.com/content/4351d5b0-0888-4b47-9368-6bc4dfbccbf5</a></li>
+                                      <li><a href="https://www.cardrates.com/advice/credit-card-ownership-by-age-income-gender-and-race/" style = color:blue;>https://www.cardrates.com/advice/credit-card-ownership-by-age-income-gender-and-race/</a></li>
+                                      <li><a href="https://www.nerdwallet.com/article/credit-cards/10-tips-credit-card-application-approved" style = color:blue;>https://www.nerdwallet.com/article/credit-cards/10-tips-credit-card-application-approved</a></li>
+                                      <li><a href="https://www.forbes.com/advisor/personal-loans/easiest-personal-loans-to-get/" style = color:blue;>https://www.forbes.com/advisor/personal-loans/easiest-personal-loans-to-get/</a></li>
                                     </ol>
                                 </div>
 
-                                <div class="col-md-6 text-left">
+                                <div class="col-md-5 text-left">
                                 
-                                    <img src="images/acledmap.png" style = width:100%;>
+                                    <img src="static/images/references_bank.jpeg" style = width:100%;>
                                 
                                 </div>                                                         
 

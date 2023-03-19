@@ -19,9 +19,13 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route("/data")
-def data():
-    return render_template("data.html")
+@app.route("/data_cc")
+def data_cc():
+    return render_template("data_cc.html")
+
+@app.route("/data_l")
+def data_l():
+    return render_template("data_l.html")
 
 @app.route("/references")
 def references():
@@ -34,6 +38,19 @@ def credit_card():
 @app.route("/loan")
 def loan():
     return render_template("loan.html")
+
+@app.route("/tableau_cc")
+def tableau_cc():
+    return render_template("tableau_cc.html")
+
+@app.route("/tableau_ld")
+def tableau_ld():
+    return render_template("tableau_ld.html")
+
+@app.route("/tableau_ld_map")
+def tableau_ld_map():
+    return render_template("tableau_ld_map.html")
+
 
 @app.route("/makePredictions", methods=["POST"])
 def makePrediction():

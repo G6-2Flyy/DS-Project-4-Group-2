@@ -39,11 +39,12 @@
   </head>
 
   <body>
-    <!-- Start of navbar -->
+
+     <!-- Start of navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="/credit_card">Credit Card Application Form</a>
+        <a class="navbar-brand" href="/home">Silicon Prairie Bank</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,9 +52,36 @@
 
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Approval Forms</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/credit_card">Credit Card Approval Form</a>
+                    <a class="dropdown-item" href="/loan_">Loan Application Approval Form</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tableau Dashboards</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/tableau_cc">Credit Card Data Dashboard</a>
+                    <a class="dropdown-item" href="/tableau_ld">Loan Data Dashboard</a>
+                    <a class="dropdown-item" href="/tableau_ld_map">Loan Data Map</a>
+                </div>
+            </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/loan">Loan Application Form</a>
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data</a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                
+                    <a class="dropdown-item" href="/data">Data Tables</a>
+                    <a class="dropdown-item" href="/references">References</a>
+                
+                </ul>
             </li>
            
           </ul>
@@ -156,7 +184,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleSelect2" class="form-label mt-4">Are you Employed?</label><br>
+                        <label for="exampleSelect2" class="form-label mt-4">Are you Unemployed?</label><br>
                         <select class="form-select" id="employment">
                             <option>Yes</option>
                             <option>No</option>
@@ -406,13 +434,8 @@
 
         </div>  
 
-
-
-
-
-
     </div>
         
-
+    <br><br><br>
 
     </body>

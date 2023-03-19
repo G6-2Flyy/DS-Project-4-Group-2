@@ -116,11 +116,27 @@ class ModelHelper():
         final_values = []
         for col in final_cols:
             final_values.append(df_ready.loc[0, col])
+
+        # final_values = [0.00000000e+00, 0.00000000e+00, 1.00000000e+00, 0.00000000e+00,
+        #                 1.54114853e+00, 3.31172280e+00, 1.15062176e+01, 1.48500000e+05,
+        #                 3.17934748e+01, 3.00187765e+00, 0.00000000e+00, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00, 1.00000000e+00, 0.00000000e+00,
+        #                 0.00000000e+00, 2.29425734e-01, 0.00000000e+00, 7.70574266e-01,
+        #                 0.00000000e+00, 7.70574266e-01, 0.00000000e+00, 2.29425734e-01,
+        #                 0.00000000e+00, 0.00000000e+00, 1.00000000e+00, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00, 2.29425734e-01, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00, 7.70574266e-01, 0.00000000e+00,
+        #                 0.00000000e+00, 0.00000000e+00]
         
         final_values = [final_values]
         
         pickled_model = pickle.load(open('lgb_cc_model.pkl', 'rb'))
         pred = pickled_model.predict(final_values)
         prob = pickled_model.predict_proba(final_values)
-        print(f'Prediction: {pred[0]}  Probability: {prob[0][1]}')
-        return 0;#[pred[0], prob[0][1]]
+        rpred = int(pred[0])
+        rprob = round(prob[0][1],2)
+        print(f'Prediction: {rpred}  Probability: {rprob}')
+        return [rpred, rprob];

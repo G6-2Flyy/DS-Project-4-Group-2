@@ -24,29 +24,57 @@
   </head>
 
   <body>
-    <!-- Start of navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-
-        <a class="navbar-brand" href="/loan">loan Application Form</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item">
-                <a class="nav-link" href="/credit">Credit Card Application Form</a>
-            </li>
-           
-          </ul>
-          
+    
+     <!-- Start of navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+  
+          <a class="navbar-brand" href="/home">Silicon Prairie Bank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+  
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+              
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Approval Forms</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/credit_card">Credit Card Approval Form</a>
+                        <a class="dropdown-item" href="/loan_">Loan Application Approval Form</a>
+                    </div>
+                </li>
+  
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tableau Dashboards</a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/tableau_cc">Credit Card Data Dashboard</a>
+                      <a class="dropdown-item" href="/tableau_ld">Loan Data Dashboard</a>
+                      <a class="dropdown-item" href="/tableau_ld_map">Loan Data Map</a>
+                  </div>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+  
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data</a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                  
+                      <a class="dropdown-item" href="/data">Data Tables</a>
+                      <a class="dropdown-item" href="/references">References</a>
+                  
+                  </ul>
+              </li>
+             
+            </ul>
+            
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- End of navbar -->
+      </nav>
+      <!-- End of navbar -->
 
     <div class="container-fluid">
 
@@ -95,7 +123,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">First Name</label>
+                        <label for="exampleTextarea" class="form-label mt-4">Name</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -107,7 +135,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">Last Name</label>
+                        <label for="exampleTextarea" class="form-label mt-4">Age</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -140,8 +168,13 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">Age</label>
-                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                        <label for="exampleSelect2" class="form-label mt-4">Home Ownership</label><br>
+                        <select class="form-select" id="exampleSelect1">
+                            <option>Rent</option>
+                            <option>Own</option>
+                            <option>Mortgage</option>
+                            <option>Other</option>
+                        </select>
                     </div>
 
                 </form>
@@ -244,14 +277,12 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleSelect2" class="form-label mt-4">Home Ownership</label><br>
+                        <label for="exampleSelect1" class="form-label mt-4">Loan Term (Months)</label>
                         <select class="form-select" id="exampleSelect1">
-                            <option>Rent</option>
-                            <option>Own</option>
-                            <option>Mortgage</option>
-                            <option>Other</option>
+                          <option>36</option>
+                          <option>60</option>
                         </select>
-                        </div>
+                    </div>
 
                 </form>
             
@@ -276,29 +307,13 @@
 
             <div class="col-md-4 text-left">
 
-                <form>
-                    <fieldset>
-                      <!-- <legend>Legend</legend> -->
+                <form>                 
 
                     <div class="form-group">
-                        <label for="exampleSelect1" class="form-label mt-4">Loan Term</label>
-                        <select class="form-select" id="exampleSelect1">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
+                        <label for="exampleTextarea" class="form-label mt-4">Date of Issue (yyyy-mm-dd)</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                    </div>
 
-                    <!-- <div class="form-group">
-                        <label for="exampleSelect2" class="form-label mt-4">Loan Term</label><br>
-                        <select class="form-select" id="exampleSelect1">
-                            <option>36</option>
-                            <option>60</option>
-                        </select>
-                    </div> -->
-                    </fieldset>
                 </form>
             
             </div>
@@ -352,7 +367,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleSelect2" class="form-label mt-4">Debt to Income Ration</label>
+                        <label for="exampleSelect2" class="form-label mt-4">Debt to Income Ratio</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -365,13 +380,13 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleSelect2" class="form-label mt-4">Residence Type</label><br>
+                        <label for="exampleSelect2" class="form-label mt-4">Grade</label><br>
                         <select class="form-select" id="exampleSelect1">
-                            <option>Own House/Apartment</option>
-                            <option>With Parents</option>
-                            <option>Rented Apartment</option>
-                            <option>Office Apartment</option>
-                            <option>Co-op Apartment</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
                         </select>
                     </div>
 
@@ -384,13 +399,13 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleSelect2" class="form-label mt-4">Education Level</label><br>
+                        <label for="exampleSelect2" class="form-label mt-4">Sub-Grade</label><br>
                         <select class="form-select" id="exampleSelect1">
-                            <option>Lower Secondary</option>
-                            <option>Secondary</option>
-                            <option>Some College</option>
-                            <option>College Graduate</option>
-                            <option>Post-Graduate Degree</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
                     </div>
 
@@ -407,7 +422,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">Total Income (Yuan)</label>
+                        <label for="exampleTextarea" class="form-label mt-4">Number of Delinquencies (Past 2 Years)</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -420,7 +435,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">Number of Months with Active Credit Card</label>
+                        <label for="exampleTextarea" class="form-label mt-4">Number of Credit Inquiries (Past 6 Months)</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -433,7 +448,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">Number of Children</label>
+                        <label for="exampleTextarea" class="form-label mt-4">Number of Open Credit Lines</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -450,7 +465,7 @@
                 <form>
 
                     <div class="form-group">
-                        <label for="exampleTextarea" class="form-label mt-4">Total Number of Dependents</label>
+                        <label for="exampleTextarea" class="form-label mt-4">Total Number of Credit Lines</label>
                         <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
                     </div>
 
@@ -458,36 +473,82 @@
 
             </div>  
 
-            <div class="col-md-4" style="text-align: center;">
+            <div class="col-md-4 text-left">
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea" class="form-label mt-4">Total Credit</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                    </div>
+
+                </form>
+
+            </div>  
+
+            <div class="col-md-4 text-left">
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea" class="form-label mt-4">Ratio of Total Credit Utilized</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                    </div>
+
+                </form>
+
+            </div>  
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 text-left">
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea" class="form-label mt-4">Number of Recent Bankruptcies</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                    </div>
+
+                </form>
+
+            </div>  
+
+            <div class="col-md-4 text-left">
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea" class="form-label mt-4">Date of Last Credit Pull (yyyy-mm-dd)</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6" style="text-align: center;">
                 <br>
                 <button type="button" class="btn btn-lg btn-primary" id="submit">Submit Application Form</button>
             </div>
 
-            <div class="col-md-4" style="text-align: center;">
+            <div class="col-md-6" style="text-align: center;">
 
                 <br>
-                <p style="font-size: 20px">Result </p>
+                <p id="result" style="font-size: 20px">Result </p>
 
             </div>
 
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
         
-
+    <br><br><br>
 
     </body>
