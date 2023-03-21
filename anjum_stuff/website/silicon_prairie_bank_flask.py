@@ -55,6 +55,11 @@ def tableau_ld():
 def tableau_ld_map():
     return render_template("tableau_ld_map.html")
 
+@app.route("/tableau_ld_map2")
+def tableau_ld_map2():
+    return render_template("tableau_ld_map2.html")
+
+
 
 @app.route("/makePredictions", methods=["POST"])
 def makePrediction():

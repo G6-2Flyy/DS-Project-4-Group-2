@@ -141,6 +141,6 @@ class ModelHelper():
         pred = pickled_model.predict(final_values)
         prob = pickled_model.predict_proba(final_values)
         rpred = int(pred[0])
-        rprob = round(prob[0][1],2)
+        rprob = round(prob[0][rpred],2)
         print(f'Prediction: {rpred}  Probability: {rprob}')
-        return [rpred, rprob];
+        return [rpred, rprob]

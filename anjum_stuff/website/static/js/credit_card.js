@@ -72,10 +72,13 @@ function make_predictions(payload) {
             pred_prob = returnedData["prediction"];
             console.log(pred_prob)
             pred = pred_prob[0];
+            prob = pred_prob[1]*100;
             if (pred == 1) {
                 $("#output").text("We are not able to approve your application.");
+                $("#output2").text(`We predict that you have a ${prob} % chance of default`)
             } else {
-                $("#output").text("Congratulations! You are approved!");
+                $("#output").text("Congratulations! You are approved!")
+                $("#output2").text(`We predict that you have a ${prob} % chance of full repayment`);
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
