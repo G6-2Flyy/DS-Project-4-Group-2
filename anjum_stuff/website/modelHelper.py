@@ -113,6 +113,10 @@ class ModelHelper():
             if col not in df_ready.columns:
                 df_ready[col] = 0
         
+        cols = ['Gender', 'Own_car', 'Own_property', 'Unemployed']
+        for col in cols:
+            df_ready[col] = df_ready[col].astype('int')
+
         final_values = []
         for col in final_cols:
             final_values.append(df_ready.loc[0, col])

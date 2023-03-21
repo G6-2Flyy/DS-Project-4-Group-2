@@ -43,6 +43,10 @@ def loan():
 def tableau_cc():
     return render_template("tableau_cc.html")
 
+@app.route("/tableau_cc2")
+def tableau_cc2():
+    return render_template("tableau_cc2.html")
+
 @app.route("/tableau_ld")
 def tableau_ld():
     return render_template("tableau_ld.html")
@@ -55,6 +59,7 @@ def tableau_ld_map():
 @app.route("/makePredictions", methods=["POST"])
 def makePrediction():
     content = request.json["data"]
+    print(content)
     pred = model_helper.makePredictionss(content)
     return(jsonify({"ok": True, "prediction": pred}))
 

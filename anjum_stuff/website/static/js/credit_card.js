@@ -28,8 +28,16 @@ function preparedata() {
     cc_active_time = d3.select("#cc_active_time").node().value;
     num_children = d3.select("#num_children").node().value;
     size_family = d3.select("#size_family").node().value;
-    console.log(full_name)
-    console.log(gender)
+    
+    if (num_children > 3) {
+        num_children = 3;
+      }
+
+      if (size_family > 4) {
+        size_family = 4;
+      }
+
+
     data_json = {
         'Gender': gender, 
         'Own_car': car,
